@@ -1,5 +1,7 @@
 # nothing.
  Just nothing.
+# Discord
+ Join the [Discord server](https://discord.gg/rN8UuZMTKa) if you have any questions!
 
 # Build Requirements
 -  **Unity Hub** - The project manager for Unity projects.
