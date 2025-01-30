@@ -14,7 +14,7 @@
 -  Clone to your current directory. ```git clone https://github.com/LoganTCP/nothing..git``` (Note: you may have to rename the cloned folder to remove the ```.``` otherwise, the project will not open).
 
  #### 2. Open in Unity 2020.3.12f1
--  Open Unity Hub and make sure you have ```Unity 2020.3.12f1``` installed.
+-  Open Unity Hub and make sure you have ```Unity 2022.3.57f1``` installed.
 -  Click ```Add``` in the top-right corner of the window.
 -  Navigate to the cloned repo and open it.
 

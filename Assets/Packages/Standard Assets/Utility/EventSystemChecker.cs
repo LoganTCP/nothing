@@ -15,7 +15,7 @@ public class EventSystemChecker : MonoBehaviour
             //Instantiate(eventSystem);
             GameObject obj = new GameObject("EventSystem");
             obj.AddComponent<EventSystem>();
-            obj.AddComponent<StandaloneInputModule>().forceModuleActive = true;
+            obj.AddComponent<StandaloneInputModule>();  // Removed forceModuleActive as it's no longer needed
         }
     }
 }
