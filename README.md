@@ -5,7 +5,7 @@
 
 # Build Requirements
 -  **Unity Hub** - The project manager for Unity projects.
--  **Unity Editor 2020.3.12f1** - The Editor for Unity projects.
+-  **Unity Editor 2022.3.57f1** - The Editor for Unity projects.
 -  **Build Modules** - Any modules you plan to build with (Ex: Windows, MacOS, Linux, WebGL, etc.). See, [Add modules to the Unity Editor](https://docs.unity3d.com/hub/manual/AddModules.html), for instructions.
 
 # How to Build
