@@ -9,10 +9,26 @@ public class Interactable : MonoBehaviour
         ActivateSwitch
     }
 
+    [Tooltip("What action to perform on the target GameObject")]
     public InteractionType interactionType; // Dropdown in Inspector
-    public Animator objectAnimationController; // Select Door Animator
-    public Transform objectTansform; // Select Door Transform
-    private bool isOpen = false;
+    [Tooltip("Select the animator component for the target GameObject (if applicable) Note: Make sure the animator is disabled on initialization")]
+    public Animator objectAnimationController; // Select GameObject Animator
+    [Tooltip("Select the open animation clip (if applicable)")]
+    public AnimationClip openAnimation; // Select Open Animation Clip
+    [Tooltip("Select the close animation clip (if applicable)")]
+    public AnimationClip closeAnimation; // Select Close Animation Clip
+    [Tooltip("Select the transform component for the target GameObject (if applicable)")]
+    public Transform objectTransform; // Select GameObject Transform
+    [Tooltip("The rotation of the fully opened position on the GameObject's transform (if applicable)")]
+    public Vector3 openedRotation; // Set Fully Opened Rotation in objectTransform, used to reset rotation before animation to prevent the GameObj from moving outside of rotation range
+    [Tooltip("The rotation of the fully closed position on the GameObject's transform (if applicable)")]
+    public Vector3 closedRotation; // Set Fully Closed Rotation in objectTransform, used to reset rotation before animation to prevent the GameObj from moving outside of rotation range
+    [Tooltip("Specifies if the GameObject is locked (closed position) Useful for using with keys")]
+    public bool locked = false; // Allows locking the GameObject from being interacted with
+    [Tooltip("Specifies if the target GameObject is allowed to be closed (if applicable)")]
+    public bool canClose = true; // Allows setting to prevent the door from being closed again
+    [Tooltip("Specifies if the target GameObject is currently opened (if applicable)")]
+    public bool isOpen = false; // Tells the script if the GameObject is open
 
     public void Interact()
     {
@@ -38,21 +54,27 @@ public class Interactable : MonoBehaviour
 
     private void OpenDoor()
     {
-        if (isOpen == false)
+        if (isOpen == false && locked == false)
         {
             //Debug.Log("Door opened!");
             // Add door-opening logic here
-            objectTansform.rotation = Quaternion.Euler(0, 180, 0);
-            objectAnimationController.enabled = true;
-            objectAnimationController.Play("doorOpen");
-            isOpen = true;
+            if (objectTransform != null)
+            {
+                objectTransform.rotation = Quaternion.Euler(openedRotation);
+            }
+                objectAnimationController.enabled = true;
+                objectAnimationController.Play(openAnimation.name);
+                isOpen = true;
         }
-        else if (isOpen == true)
+        else if (isOpen == true && canClose == true && locked == false)
         {
             //Debug.Log("Door Closed!");
-            objectTansform.rotation = Quaternion.Euler(0, 75, 0);
+            if (objectTransform != null)
+            {
+                objectTransform.rotation = Quaternion.Euler(closedRotation);
+            }
             objectAnimationController.enabled = true;
-            objectAnimationController.Play("doorClose");
+            objectAnimationController.Play(closeAnimation.name);
             isOpen = false;
         }
     }
