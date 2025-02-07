@@ -34713,7 +34713,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1530283789}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ScaleUI853
+        m_MethodName: ScaleUI480
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34722,30 +34722,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 709863180}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1154415382}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &709863184
 MonoBehaviour:
@@ -43711,30 +43687,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 871842955}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 709863180}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &871842959
 MonoBehaviour:
@@ -57651,30 +57603,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1154415382}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1865221259}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1154415385
 MonoBehaviour:
@@ -77134,11 +77062,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3769e959ed364218ad96f4121ecdf39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleCanvasScaler: {fileID: 1912686514}
-  pauseCanvasScaler: {fileID: 758885861}
-  settingsCanvasScaler: {fileID: 966661133}
-  audioCanvasScaler: {fileID: 1181911532}
-  displayCanvasScaler: {fileID: 193131228}
+  canvasScalers:
+  - {fileID: 1912686514}
+  - {fileID: 758885861}
+  - {fileID: 966661133}
+  - {fileID: 1181911532}
+  - {fileID: 193131228}
+  extraSmallResolution: {x: 853, y: 480}
+  smallResolution: {x: 1280, y: 720}
+  normalResolution: {x: 1920, y: 1080}
+  bigResolution: {x: 2560, y: 1440}
+  guiScaleButton1: {fileID: 1154415382}
+  guiScaleButton2: {fileID: 1865221259}
+  guiScaleButton3: {fileID: 871842955}
+  guiScaleButton4: {fileID: 709863180}
 --- !u!1001 &1531474053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93401,30 +93338,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1865221259}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 871842955}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &1865221262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95957,7 +95870,6 @@ GameObject:
   - component: {fileID: 1912686519}
   - component: {fileID: 1912686518}
   - component: {fileID: 1912686517}
-  - component: {fileID: 1912686520}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -96099,23 +96011,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1912686520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912686512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3769e959ed364218ad96f4121ecdf39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleCanvasScaler: {fileID: 0}
-  pauseCanvasScaler: {fileID: 0}
-  settingsCanvasScaler: {fileID: 0}
-  audioCanvasScaler: {fileID: 0}
-  displayCanvasScaler: {fileID: 0}
 --- !u!1001 &1915634855
 PrefabInstance:
   m_ObjectHideFlags: 0
