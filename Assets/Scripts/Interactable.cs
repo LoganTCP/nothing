@@ -13,10 +13,16 @@ public class Interactable : MonoBehaviour
     public InteractionType interactionType; // Dropdown in Inspector
     [Tooltip("Select the animator component for the target GameObject (if applicable) Note: Make sure the animator is disabled on initialization")]
     public Animator objectAnimationController; // Select GameObject Animator
+    [Tooltip("Select the audio source component for the target GameObject (if applicable)")]
+    public AudioSource objectAudioSource; // Select GameObject Audio Source
     [Tooltip("Select the open animation clip (if applicable)")]
     public AnimationClip openAnimation; // Select Open Animation Clip
+    [Tooltip("Select the Open Audio clip for this object (if applicable)")]
+    public AudioClip openSound; // Select Open Audio Clip
     [Tooltip("Select the close animation clip (if applicable)")]
     public AnimationClip closeAnimation; // Select Close Animation Clip
+    [Tooltip("Select the Close Audio clip for this object (if applicable)")]
+    public AudioClip closeSound; // Select Close Audio Clip
     [Tooltip("Select the transform component for the target GameObject (if applicable)")]
     public Transform objectTransform; // Select GameObject Transform
     [Tooltip("The rotation of the fully opened position on the GameObject's transform (if applicable)")]
@@ -56,26 +62,33 @@ public class Interactable : MonoBehaviour
     {
         if (isOpen == false && locked == false)
         {
-            //Debug.Log("Door opened!");
-            // Add door-opening logic here
             if (objectTransform != null)
             {
                 objectTransform.rotation = Quaternion.Euler(openedRotation);
             }
-                objectAnimationController.enabled = true;
-                objectAnimationController.Play(openAnimation.name);
-                isOpen = true;
+            objectAnimationController.enabled = true;
+            objectAnimationController.Play(openAnimation.name);
+            if (objectAudioSource != null && openSound != null)
+            {
+                objectAudioSource.clip = openSound;
+                objectAudioSource.Play();
+            }
+            isOpen = true;
         }
         else if (isOpen == true && canClose == true && locked == false)
         {
-            //Debug.Log("Door Closed!");
             if (objectTransform != null)
             {
                 objectTransform.rotation = Quaternion.Euler(closedRotation);
             }
             objectAnimationController.enabled = true;
             objectAnimationController.Play(closeAnimation.name);
-            isOpen = false;
+            if (objectAudioSource != null && closeSound != null)
+            {
+                objectAudioSource.clip = closeSound;
+                objectAudioSource.Play();
+                isOpen = false;
+            }
         }
     }
 
