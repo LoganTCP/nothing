@@ -34713,7 +34713,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1530283789}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ScaleUI480
+        m_MethodName: ScaleUIExtraSmall
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43678,7 +43678,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1530283789}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ScaleUI1440
+        m_MethodName: ScaleUIBig
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -57594,7 +57594,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1530283789}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ScaleUI720
+        m_MethodName: ScaleUISmall
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -93328,7 +93328,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1530283789}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ScaleUI1080
+        m_MethodName: ScaleUINormal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
